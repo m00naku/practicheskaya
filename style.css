@@ -11,12 +11,15 @@ body {
 }
 
 .header {
-    width: 86%;
+    width: 600px;
+    max-width: 100%;
     margin: 45px auto 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+
 
 .header__logo {
     width: 38%;
@@ -31,7 +34,8 @@ body {
 }
 
 .nav {
-    width: 87%;
+    width: 600px;
+    max-width: 100%;
     margin: 0 auto 20px;
 }
 
@@ -42,10 +46,10 @@ body {
 }
 
 
-/* Верхние карточки */
 
 .main {
-    width: 87%;
+    width: 600px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -81,7 +85,7 @@ body {
 }
 
 
-/* Нижние колонки */
+
 
 .columns {
     display: flex;
@@ -107,22 +111,35 @@ body {
 }
 
 
-/* Контент */
+
 
 .content {
+    border: 3px solid #e52b2b;
+    padding: 8px;
     display: flex;
     flex-direction: column;
-    gap: 0;
 }
+
+
+
 
 .content__item {
     min-height: 120px;
-    border: 3px solid #e52b2b;
-    padding: 5px;
+    padding: 12px 8px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 18px;
 }
+
+
+
+
+.content__item + .content__item {
+    margin-top: 8px;
+}
+
+
+
 
 .content__image {
     width: 75px;
@@ -130,6 +147,9 @@ body {
     background-color: #000;
     flex-shrink: 0;
 }
+
+
+
 
 .content__text {
     flex: 1;
@@ -146,9 +166,17 @@ body {
 }
 
 
-/* Адаптация */
+
+
+.content__item--reverse {
+    flex-direction: row-reverse;
+}
+
+
+
 
 @media (max-width: 600px) {
+
     .cards {
         flex-direction: column;
     }
@@ -167,5 +195,14 @@ body {
 
     .header__info {
         width: 25%;
+    }
+
+    .content__item {
+        gap: 12px;
+    }
+
+    .content__image {
+        width: 60px;
+        height: 60px;
     }
 }
