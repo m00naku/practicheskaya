@@ -41,6 +41,7 @@ body {
     background-color: #000;
 }
 
+
 /* Верхние карточки */
 
 .main {
@@ -52,8 +53,8 @@ body {
     border: 3px solid #e52b2b;
     padding: 5px 10px 10px;
     display: flex;
-    justify-content: space-evenly;
-    gap: 30px;
+    justify-content: space-around;
+    gap: 35px;
     margin-bottom: 47px;
 }
 
@@ -79,6 +80,7 @@ body {
     line-height: 1.45;
 }
 
+
 /* Нижние колонки */
 
 .columns {
@@ -103,6 +105,7 @@ body {
     background-color: #000;
     margin-bottom: 19px;
 }
+
 
 /* Контент */
 
@@ -142,3 +145,27 @@ body {
     line-height: 1.45;
 }
 
+
+/* Адаптация */
+
+@media (max-width: 600px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .columns {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .header__logo {
+        width: 45%;
+    }
+
+    .header__info {
+        width: 25%;
+    }
+}
